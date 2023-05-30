@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import { Route, Routes } from 'react-router-dom';
+
 import axios from 'axios'
+import Home from './pages/Home';
 
 function App() {
   const [allRestaurants, setAllRestaurants] = useState<any>()
@@ -18,15 +21,9 @@ function App() {
 
   return (
     <>
-      {
-        allRestaurants && allRestaurants.map((restaurant: any) => (    
-          <div>
-            <h1 key={restaurant.name}>{restaurant.name}</h1>
-            <h3>Rating: {restaurant.rating}</h3>
-          </div>   
-          
-        ))
-      }
+      <Routes>
+        <Route path='/' element={<Home />}/>
+      </Routes>
     </>
   )
 }
