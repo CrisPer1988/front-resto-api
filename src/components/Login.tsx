@@ -3,7 +3,7 @@ import { useState } from "react"
 import { useForm } from "react-hook-form"
 
 const Login = () => {
-    const [token, setToken] = useState()
+    const [token, setToken] = useState<null>()
     const {handleSubmit, register, reset} = useForm()
 
     const submit = (data:any) => {

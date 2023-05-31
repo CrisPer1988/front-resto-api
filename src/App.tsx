@@ -4,6 +4,8 @@ import { Route, Routes } from 'react-router-dom';
 
 import axios from 'axios'
 import Home from './pages/Home';
+import ProtectRoutes from './pages/ProtectRoutes';
+import Restaurants from './pages/Restaurants';
 
 function App() {
   const [allRestaurants, setAllRestaurants] = useState<any>()
@@ -16,14 +18,19 @@ function App() {
       .catch(err => console.log(err))
   }, [])
 
-  console.log(allRestaurants);
+  //console.log(allRestaurants);
   
 
   return (
     <>
       <Routes>
         <Route path='/' element={<Home />}/>
+      
+        <Route element={<ProtectRoutes />}>
+        <Route path='/restaurants' element={<Restaurants />}/>
+      </Route>
       </Routes>
+     
     </>
   )
 }

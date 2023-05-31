@@ -8,6 +8,7 @@ const Register = () => {
     const {register, handleSubmit, reset} = useForm()
 
 
+
     const submit = (data: any) => {
         const url = "http://localhost:3400/api/v1/users/signup"
     axios.post(url, data)
@@ -17,7 +18,11 @@ const Register = () => {
         localStorage.setItem("name", `${res.data.user.name}`)
     })
     .catch(err => console.log(err))
+
     }
+    
+
+    
 
     const handleSalir = () => {
         localStorage.clear()

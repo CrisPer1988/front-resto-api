@@ -7,10 +7,10 @@ const CarrusellHome = () => {
   return (
   <>
   <OwlCarousel
-  items="3"
+  items:string="3"
   loop
   autoplay
-  autoplayTimeout="1000"
+  autoplayTimeout:string="2500"
 
 
   >
@@ -41,7 +41,7 @@ const CarrusellHome = () => {
   items="3"
   loop
   autoplay
-  autoplayTimeout="1200"
+  autoplayTimeout="2500"
  
   >
     <div className="item content__img-carousel">
