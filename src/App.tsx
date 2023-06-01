@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import { Route, Routes } from 'react-router-dom';
+import HomeFooter from "../src/components/HomeFooter";
+
 
 import axios from 'axios'
 import Home from './pages/Home';
 import ProtectRoutes from './pages/ProtectRoutes';
 import Restaurants from './pages/Restaurants';
+import Navegacion from './components/Navegacion';
 
 function App() {
   const [allRestaurants, setAllRestaurants] = useState<any>()
@@ -23,6 +26,7 @@ function App() {
 
   return (
     <>
+     <Navegacion/>
       <Routes>
         <Route path='/' element={<Home />}/>
       
@@ -30,7 +34,7 @@ function App() {
         <Route path='/restaurants' element={<Restaurants />}/>
       </Route>
       </Routes>
-     
+      <HomeFooter/>
     </>
   )
 }
