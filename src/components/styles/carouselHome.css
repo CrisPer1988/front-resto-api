@@ -1,11 +1,203 @@
-.img__carousel {
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  min-width: 1200px; 
+}
+
+.card {
+  margin-right: 50px;
+  transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+  width: 20%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.10);
+}
+.card__img {
+  visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
-    max-width: 200px;
-    aspect-ratio: 1;
-    border-radius: 50%;
+    height: 235px;
+  border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+  
 }
 
-.content__img-carousel {
 
-   
+
+.card--1 .card__img,
+.card--1 .card__img--hover {
+  background-image: url('https://images.pexels.com/photos/1633525/pexels-photo-1633525.jpeg?auto=compress&cs=tinysrgb&w=400');
 }
+
+.card--2 .card__img,
+.card--2 .card__img--hover {
+  background-image: url('https://images.pexels.com/photos/323682/pexels-photo-323682.jpeg?auto=compress&cs=tinysrgb&w=400');
+}
+
+.card--3 .card__img,
+.card--3 .card__img--hover {
+  background-image: url('https://images.pexels.com/photos/1998920/pexels-photo-1998920.jpeg?auto=compress&cs=tinysrgb&w=400');
+}
+.card--4 .card__img,
+.card--4 .card__img--hover {
+  background-image: url('https://images.pexels.com/photos/1199957/pexels-photo-1199957.jpeg?auto=compress&cs=tinysrgb&w=400');
+}
+.card--5 .card__img,
+.card--5 .card__img--hover {
+  background-image: url('https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&w=400');
+}
+.card--6 .card__img,
+.card--6 .card__img--hover {
+  background-image: url('https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg?auto=compress&cs=tinysrgb&w=400');
+}
+.card--7 .card__img,
+.card--7 .card__img--hover {
+  background-image: url('https://images.pexels.com/photos/1833349/pexels-photo-1833349.jpeg?auto=compress&cs=tinysrgb&w=400');
+}
+.card--8 .card__img,
+.card--8 .card__img--hover {
+  background-image: url('https://images.pexels.com/photos/2147491/pexels-photo-2147491.jpeg?auto=compress&cs=tinysrgb&w=400');
+}
+
+.card__like {
+  width: 30px;
+  color: rgb(255, 1, 1);
+}
+
+.card__like:hover {
+  background-color: rgb(89, 84, 84);
+}
+
+.card__clock {
+  width: 15px;
+  vertical-align: middle;
+  color: #1c9d05;
+}
+
+.card__time {
+  font-size: 12px;
+  color: #1e870c;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.card__clock-info {
+  float: right;
+}
+
+.card__info-hover {
+  position: absolute;
+  padding: 16px;
+  width: 100%; 
+  opacity: 0;
+  top: 0;
+}
+
+
+
+.card__info {
+  z-index: 2;
+  background-color: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 16px 24px 24px 24px;
+}
+
+.card__category {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #041b00;
+}
+
+.card__title {
+  margin-top: 0.1em;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.card__by {
+  font-size: 12px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+
+.card__author {
+  font-weight: 600;
+  text-decoration: none;
+  color: #39a909;
+}
+
+
+.card:hover .card__img--hover {
+  height: 100%;
+  opacity: 0.3;
+}
+
+.card:hover .card__info {
+  background-color: transparent;
+  position: relative;
+}
+
+.card:hover .card__info-hover {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card__img--hover {
+  transition: 0.2s all ease-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
