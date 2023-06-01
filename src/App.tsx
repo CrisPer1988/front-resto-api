@@ -26,7 +26,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}/>
       
-        <Route element={<ProtectRoutes />}>
+      <Route element={<ProtectRoutes />}>
         <Route path='/restaurants' element={<Restaurants />}/>
       </Route>
       </Routes>
