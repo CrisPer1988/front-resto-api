@@ -7,7 +7,7 @@ const CarrusellHome = () => {
   return (
   <>
   <OwlCarousel
-  items="3"
+  items="1"
   loop
   autoplay
   autoplayTimeout:string="2500"
