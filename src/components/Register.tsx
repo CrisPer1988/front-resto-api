@@ -21,9 +21,6 @@ const Register = () => {
 
     }
     
-
-    
-
     const handleSalir = () => {
         localStorage.clear()
         setToken(null)

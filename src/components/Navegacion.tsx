@@ -13,7 +13,6 @@ const Navegacion = () => {
         <li className="nav-item li__navbar">
           <a className="nav-link active text-white item_navbar" aria-current="page" href="#">Home</a>
           <a className="nav-link active text-white item_navbar" aria-current="page" href="#">Chau</a>
-          <a className="nav-link active text-white item_navbar" aria-current="page" href="#">Te Amo</a>
         </li>
       </ul>
       <form className="d-flex" role="search">

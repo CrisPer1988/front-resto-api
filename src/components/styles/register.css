@@ -6,19 +6,21 @@
     gap: 1.5rem;
     border: 1px solid rgb(104, 104, 104);
     border-radius: 15px;
-    width: 50%;
-    height: 80vh;
-    background: linear-gradient(141deg, rgba(149,148,143,1) 17%, rgba(224,220,197,1) 26%, rgba(130,130,130,1) 36%, rgba(224,220,197,1) 46%, rgba(168,166,157,1) 54%, rgba(224,220,197,1) 61%, rgba(158,157,150,1) 70%, rgba(224,220,197,1) 76%, rgba(139,139,137,1) 84%, rgba(224,220,197,1) 94%);
+    width: 40%;
+    height: 60vh;
+    background-color: rgb(225, 225, 225);
+    position: fixed;
     margin: 0 auto;
-    /* position: fixed;
-    top: 0;
-    left: 0; */
+    top: 100px;
+    left: 33%;
+    
+   
 }
 
 .items__form {
     display: flex;
     flex-direction: column;
-    width: 40%; 
+    width: 60%; 
 }
 
 .items__form input {
@@ -28,6 +30,7 @@
     border-bottom: 2px solid black;
     border-right: 2px solid black;
     padding: 5px;
+    height: 40px;
 }
 
 .items__form input:hover {
@@ -43,7 +46,8 @@
     border: none;
     border-radius: 15px;
     width: 40%;
-    height: 34px;
+    height: 40px;
+    margin-top: 20px;
     box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.758);
 
 }

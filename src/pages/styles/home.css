@@ -1,8 +1,7 @@
 .content__home {
     padding: 20px 100px;
-    padding-top: 80px;
+    padding-top: 120px;
     height: 100vh;
-
    
 }
 
@@ -26,7 +25,7 @@
 .x__close {
     position: absolute;
     right: 30%;
-    top: 5%;
+    top: 20%;
     color: rgb(56, 56, 56);
     border: 2px solid rgb(89, 89, 89);
     border-radius: 50%;
@@ -37,4 +36,5 @@
     justify-content: center;
     margin: 0 auto;
     cursor: pointer;
+    z-index: 1000;
 }
