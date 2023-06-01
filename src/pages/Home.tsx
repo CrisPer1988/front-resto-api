@@ -32,7 +32,7 @@ const Home = () => {
     <>
       <div className="content__home">
         <header className="header__home">
-          <button onClick={handleClick}>SALIR</button>
+         
           <span onClick={handleRegister}>Registrarse</span>
           <span onClick={handleLogin}>Login</span>
         </header>

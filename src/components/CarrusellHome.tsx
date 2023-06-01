@@ -6,16 +6,17 @@ import "./styles/carouselHome.css"
 const CarrusellHome = () => {
   return (
   <>
-  <OwlCarousel
-  items="1"
-  loop
+   <OwlCarousel className='owl-theme' 
+   loop 
+   nav
+  items="4"
   autoplay
-  autoplayTimeout:string="2500"
+  autoplayTimeout="2000"
+  
+  
+   > 
 
-
-  >
-    <section className="cards">
-<article className="card card--1">
+<article className="item card card--1">
   <div className="card__info-hover">
     <i className='bx bx-bookmark-heart  card__like'></i>
 
@@ -36,7 +37,7 @@ const CarrusellHome = () => {
   </div>
 </article>
 
-<article className="card card--2">
+<article className="item card card--2">
   <div className="card__info-hover">
     <i className='bx bx-bookmark-heart  card__like'></i>
 
@@ -57,7 +58,7 @@ const CarrusellHome = () => {
   </div>
 </article>
 
-<article className="card card--3">
+<article className="item card card--3">
   <div className="card__info-hover">
     <i className='bx bx-bookmark-heart  card__like'></i>
 
@@ -78,7 +79,7 @@ const CarrusellHome = () => {
   </div>
 </article>
 
-<article className="card card--4">
+<article className="item card card--4">
   <div className="card__info-hover">
     <i className='bx bx-bookmark-heart  card__like'></i>
 
@@ -99,12 +100,50 @@ const CarrusellHome = () => {
   </div>
 </article>
 
-     </section>     
+        
+    
+    {/* <div className='item'>
+        <h4>1</h4>
+    </div>
+    <div className='item'>
+        <h4>2</h4>
+    </div>
+    <div className='item'>
+        <h4>3</h4>
+    </div>
+    <div className='item'>
+        <h4>4</h4>
+    </div>
+    <div className='item'>
+        <h4>5</h4>
+    </div>
+    <div className='item'>
+        <h4>6</h4>
+    </div>
+    <div className='item'>
+        <h4>7</h4>
+    </div>
+    <div className='item'>
+        <h4>8</h4>
+    </div>
+    <div className='item'>
+        <h4>9</h4>
+    </div>
+    <div className='item'>
+        <h4>10</h4>
+    </div>
+    <div className='item'>
+        <h4>11</h4>
+    </div>
+    <div className='item'>
+        <h4>12</h4>
+    </div> */}
+
     
 
-  </OwlCarousel>
+    </OwlCarousel> 
 
-  <OwlCarousel
+ {/* <OwlCarousel
   items="1"
   loop
   autoplay
@@ -192,7 +231,7 @@ const CarrusellHome = () => {
   </div>
 </article>  
 </section>
-  </OwlCarousel>
+  </OwlCarousel> */}
  
   </>
   )

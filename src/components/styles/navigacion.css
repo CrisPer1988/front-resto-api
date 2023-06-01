@@ -1,0 +1,12 @@
+.item_navbar {
+    
+    background-color: #767672;
+    border-radius: 8px;
+    width: 80px;
+    text-align: center;
+}
+
+.li__navbar {
+    display: flex;
+    gap: 0.5rem;
+}
