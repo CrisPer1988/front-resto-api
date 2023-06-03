@@ -1,0 +1,34 @@
+.restaurants {
+    padding-top: 120px;
+    margin-bottom: 20px;
+}
+
+.container__restaurants {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding-top: 50px;
+    
+}
+
+.content__card-restaurants {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(119, 119, 119);
+    border-radius: 15px;
+    padding: 15px;
+    
+
+}
+
+.description__restaurant {
+    text-align: center;
+}
+
+.logo__restaurant {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 50%;
+}

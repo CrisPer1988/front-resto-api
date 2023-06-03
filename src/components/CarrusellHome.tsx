@@ -2,6 +2,7 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import "./styles/carouselHome.css"
+import dataCarousel from '../utils/dataCarousel';
 
 const CarrusellHome = () => {
   return (
@@ -9,20 +10,21 @@ const CarrusellHome = () => {
    <OwlCarousel className='owl-theme' 
    loop 
    nav
-  items="4"
+  items={4}
   autoplay
-  autoplayTimeout="2000"
-  
-  
-   > 
+  autoplayTimeout={2000}
+  > 
+{ 
 
-<article className="item card card--1">
+dataCarousel.map(data => (
+
+  <article key={data.img} className={`item card ${data.img}`}>
   <div className="card__info-hover">
-    <i className='bx bx-bookmark-heart  card__like'></i>
+    <i className={data.icon_like}></i>
 
       <div className="card__clock-info">
-        <i className='bx bx-timer card__clock'></i> 
-       <span className="card__time">15 min</span>
+        <i className={data.icon_clock}></i> 
+       <span className="card__time">{data.time}</span>
       </div>
     
   </div>
@@ -31,208 +33,14 @@ const CarrusellHome = () => {
      <div className="card__img--hover"></div>
    </a>
   <div className="card__info">
-    <span className="card__category"> Grill</span>
-    <h3 className="card__title">Crisp Spanish tortilla Matzo brei</h3>
-    <span className="card__by">by <a href="#" className="card__author" title="author">Cristian Perez</a></span>
+    <span className="card__category"> {data.card_category}</span>
+    <h3 className="card__title">{data.title}</h3>
+    <span className="card__by">by <a href="#" className="card__author" title="author">{data.author}</a></span>
   </div>
 </article>
-
-<article className="item card card--2">
-  <div className="card__info-hover">
-    <i className='bx bx-bookmark-heart  card__like'></i>
-
-      <div className="card__clock-info">
-        <i className='bx bx-timer card__clock'></i> 
-      <span className="card__time">15 min</span>
-      </div>
-    
-  </div>
-  <div className="card__img"></div>
-  <a href="#" className="card_link">
-     <div className="card__img--hover"></div>
-   </a>
-  <div className="card__info">
-    <span className="card__category"> Grill</span>
-    <h3 className="card__title">Crisp Spanish tortilla Matzo brei</h3>
-    <span className="card__by">by <a href="#" className="card__author" title="author">Cristian Perez</a></span>
-  </div>
-</article>
-
-<article className="item card card--3">
-  <div className="card__info-hover">
-    <i className='bx bx-bookmark-heart  card__like'></i>
-
-      <div className="card__clock-info">
-        <i className='bx bx-timer card__clock'></i> 
-      <span className="card__time">15 min</span>
-      </div>
-    
-  </div>
-  <div className="card__img"></div>
-  <a href="#" className="card_link">
-     <div className="card__img--hover"></div>
-   </a>
-  <div className="card__info">
-    <span className="card__category"> Grill</span>
-    <h3 className="card__title">Crisp Spanish tortilla Matzo brei</h3>
-    <span className="card__by">by <a href="#" className="card__author" title="author">Cristian Perez</a></span>
-  </div>
-</article>
-
-<article className="item card card--4">
-  <div className="card__info-hover">
-    <i className='bx bx-bookmark-heart  card__like'></i>
-
-      <div className="card__clock-info">
-        <i className='bx bx-timer card__clock'></i> 
-      <span className="card__time">15 min</span>
-      </div>
-    
-  </div>
-  <div className="card__img"></div>
-  <a href="#" className="card_link">
-     <div className="card__img--hover"></div>
-   </a>
-  <div className="card__info">
-    <span className="card__category"> Grill</span>
-    <h3 className="card__title">Crisp Spanish tortilla Matzo brei</h3>
-    <span className="card__by">by <a href="#" className="card__author" title="author">Cristian Perez</a></span>
-  </div>
-</article>
-
-        
-    
-    {/* <div className='item'>
-        <h4>1</h4>
-    </div>
-    <div className='item'>
-        <h4>2</h4>
-    </div>
-    <div className='item'>
-        <h4>3</h4>
-    </div>
-    <div className='item'>
-        <h4>4</h4>
-    </div>
-    <div className='item'>
-        <h4>5</h4>
-    </div>
-    <div className='item'>
-        <h4>6</h4>
-    </div>
-    <div className='item'>
-        <h4>7</h4>
-    </div>
-    <div className='item'>
-        <h4>8</h4>
-    </div>
-    <div className='item'>
-        <h4>9</h4>
-    </div>
-    <div className='item'>
-        <h4>10</h4>
-    </div>
-    <div className='item'>
-        <h4>11</h4>
-    </div>
-    <div className='item'>
-        <h4>12</h4>
-    </div> */}
-
-    
-
-    </OwlCarousel> 
-
- {/* <OwlCarousel
-  items="1"
-  loop
-  autoplay
-  autoplayTimeout="2500"
- 
-  >
-     <section className="cards"> 
-    <article className="card card--5">
-  <div className="card__info-hover">
-    <i className='bx bx-bookmark-heart  card__like'></i>
-      <div className="card__clock-info">
-        <i className='bx bx-timer card__clock'></i> 
-        <span className="card__time">35 min</span>
-      </div>
-    
-  </div>
-  <div className="card__img"></div>
-  <a href="#" className="card_link">
-     <div className="card__img--hover"></div>
-   </a>
-  <div className="card__info">
-    <span className="card__category"> Delux</span>
-    <h3 className="card__title">Discover the sea</h3>
-    <span className="card__by">by <a href="#" className="card__author" title="author">Jamar Masias</a></span>
-  </div>
-</article>  
-
-<article className="card card--6">
-  <div className="card__info-hover">
-    <i className='bx bx-bookmark-heart  card__like'></i>
-      <div className="card__clock-info">
-        <i className='bx bx-timer card__clock'></i> 
-        <span className="card__time">35 min</span>
-      </div>
-    
-  </div>
-  <div className="card__img"></div>
-  <a href="#" className="card_link">
-     <div className="card__img--hover"></div>
-   </a>
-  <div className="card__info">
-    <span className="card__category"> Delux</span>
-    <h3 className="card__title">Discover the sea</h3>
-    <span className="card__by">by <a href="#" className="card__author" title="author">Jamar Masias</a></span>
-  </div>
-</article>  
-
-<article className="card card--7">
-  <div className="card__info-hover">
-    <i className='bx bx-bookmark-heart  card__like'></i>
-      <div className="card__clock-info">
-        <i className='bx bx-timer card__clock'></i> 
-        <span className="card__time">35 min</span>
-      </div>
-    
-  </div>
-  <div className="card__img"></div>
-  <a href="#" className="card_link">
-     <div className="card__img--hover"></div>
-   </a>
-  <div className="card__info">
-    <span className="card__category"> Delux</span>
-    <h3 className="card__title">Discover the sea</h3>
-    <span className="card__by">by <a href="#" className="card__author" title="author">Jamar Masias</a></span>
-  </div>
-</article>  
-
-<article className="card card--8">
-  <div className="card__info-hover">
-    <i className='bx bx-bookmark-heart  card__like'></i>
-      <div className="card__clock-info">
-        <i className='bx bx-timer card__clock'></i> 
-        <span className="card__time">35 min</span>
-      </div>
-    
-  </div>
-  <div className="card__img"></div>
-  <a href="#" className="card_link">
-     <div className="card__img--hover"></div>
-   </a>
-  <div className="card__info">
-    <span className="card__category"> Delux</span>
-    <h3 className="card__title">Discover the sea</h3>
-    <span className="card__by">by <a href="#" className="card__author" title="author">Jamar Masias</a></span>
-  </div>
-</article>  
-</section>
-  </OwlCarousel> */}
- 
+))
+}
+  </OwlCarousel> 
   </>
   )
 }

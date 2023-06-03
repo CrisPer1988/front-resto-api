@@ -1,19 +1,13 @@
 import CarrusellHome from "../components/CarrusellHome";
 import Register from "../components/Register";
-import {  useState } from "react";
+import {  useState,useEffect } from "react";
 import "./styles/home.css";
 import Login from "../components/Login";
-
-//import { useDispatch, useSelector } from "react-redux";
 
 const Home = () => {
   const [showRegister, setShowRegister] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
-  // const {restaurants} = useSelector<any>(state => state)
-
-  // console.log(restaurants);
-  
-  
+  const [token, setToken] = useState(localStorage.getItem("token"))
 
   const handleRegister = () => {
     setShowRegister(!showRegister);
@@ -24,30 +18,35 @@ const Home = () => {
   };
 
   const handleClick = () =>{
-    localStorage.clear()
-    
+    if(localStorage.getItem("token")){
+      localStorage.clear()
+      setToken(null)
+    } 
+    // else {
+    //   location.reload()
+    // } 
    }
+
+   console.log(showLogin);
+   
 
   return (
     <>
       <div className="content__home">
-        <header className="header__home">
-         
-          <span onClick={handleRegister}>Registrarse</span>
+          {
+            localStorage.getItem("token") ?
+            <header className="header__home">
+              <span onClick={handleClick}>Salir</span>
+              </header> : <header className="header__home">
+              <span onClick={handleRegister}>Registrarse</span>
           <span onClick={handleLogin}>Login</span>
-        </header>
+            </header>
+            }
+        
         <CarrusellHome />
-        {showRegister ? <div className="content__form-home"><h2 className="x__close" onClick={handleRegister}>X</h2><Register /> </div>: ""}
+        {showRegister ? <div className="content__form-home"><h4 className="x__close" onClick={handleRegister}>X</h4><Register setShowRegister={setShowRegister}/> </div>: ""}
 
-       {showLogin ? <div className="content__form-home"><h2 className="x__close" onClick={handleLogin}>X</h2><Login /> </div>: ""} 
-       {/* <button onClick={() => dispatch(AllRestaurantsThunk())}>ver restaurantes</button> */}
-      {/* {
-        restaurants.map(resto => (
-          <div key={resto.id}>
-            <h2>{resto.name}</h2>
-          </div>
-        ))
-      } */}
+       {showLogin ? <div className="content__form-home"><h4 className="x__close" onClick={handleLogin}>X</h4><Login setShowLogin={setShowLogin}/> </div>: ""} 
       </div>
     </>
   );

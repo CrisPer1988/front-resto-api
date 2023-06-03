@@ -12,6 +12,11 @@
     padding-bottom: 50px;
 }
 
+.header__home span {
+    cursor: pointer;
+    color: rgb(15, 188, 15);
+}
+
 .content__form-home {
     position: fixed;
     backdrop-filter: blur(5px);
@@ -26,7 +31,7 @@
     position: absolute;
     right: 30%;
     top: 20%;
-    color: rgb(56, 56, 56);
+    color: rgb(255, 255, 255);
     border: 2px solid rgb(89, 89, 89);
     border-radius: 50%;
     width: 40px;

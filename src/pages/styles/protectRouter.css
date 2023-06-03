@@ -1,0 +1,12 @@
+.login__user {
+    position: fixed;
+    height: 100vh;
+    background-color: rgb(37, 224, 65);
+    color: white;
+    width: 100%;
+    padding-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

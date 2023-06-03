@@ -2,7 +2,7 @@ import axios from "axios"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 
-const Login = () => {
+const Login = ({ setShowLogin }: { setShowLogin: (value: boolean) => void }) => {
     const [token, setToken] = useState<null>()
     const {handleSubmit, register, reset} = useForm()
 
@@ -14,6 +14,8 @@ const Login = () => {
             setToken(res.data)
             localStorage.setItem("token", res.data.token)
             localStorage.setItem("name", res.data.name)
+            reset()
+            setShowLogin(false)
 
         })
         .catch(err => console.log(err))

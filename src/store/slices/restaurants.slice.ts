@@ -6,7 +6,7 @@ export const restaurantsSlices = createSlice({
     name: "restaurants",
     initialState: null,
     reducers: {
-        setRestaurants: (state:any, action:any) => action.payload
+        setRestaurants: (state, action) => action.payload
     }
 
 })
@@ -27,3 +27,4 @@ export const AllRestaurantsThunk = () => (dispatch:any) => {
     })
     .catch(err => console.log(err))
 }
+

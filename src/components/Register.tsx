@@ -3,7 +3,7 @@ import axios from "axios";
 import { useForm } from 'react-hook-form';
 import "./styles/register.css"
 
-const Register = () => {
+const Register = ({ setShowRegister }: { setShowRegister: (value: boolean) => void }) => {
     const [token, setToken] = useState<null>()
     const {register, handleSubmit, reset} = useForm()
 
@@ -16,24 +16,14 @@ const Register = () => {
         setToken(res.data)
         localStorage.setItem("token", res.data.token)
         localStorage.setItem("name", `${res.data.user.name}`)
+        reset()
+        setShowRegister(false)
     })
     .catch(err => console.log(err))
 
     }
-    
-    const handleSalir = () => {
-        localStorage.clear()
-        setToken(null)
-    }
 
     console.log(token);
-    
-    if(localStorage.getItem("name")){
-        return <div>
-            <h2>Hola {localStorage.getItem("name")}</h2>
-            <button onClick={handleSalir}>Salir</button>
-        </div>
-    } else { 
 
   return (
     <form className='form__auth' onSubmit={handleSubmit(submit)}>
@@ -53,7 +43,7 @@ const Register = () => {
         <button>Enviar</button>
     </form>
   )
-    }
+    
 }
 
 export default Register
