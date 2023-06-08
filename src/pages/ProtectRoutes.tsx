@@ -5,7 +5,7 @@ const ProtectRoutes = () => {
     if(localStorage.getItem("token")){
         return <Outlet />
     } else {
-        return <div className="login__user"><h2>LOGEATE PELOTUDO</h2>
+        return <div className="login__user"><h2>LOGEATE</h2>
         <Link to="/">Ingresar</Link></div>
         
     }
