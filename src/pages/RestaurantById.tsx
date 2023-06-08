@@ -8,6 +8,7 @@ import CardPurchases from "../components/CardPurchases"
 const RestaurantById = () => {
    const {id} = useParams()
    const [restaurant, setRestaurant] = useState<any>()
+   const [getPrice, setGetPrice] = useState()
    const navidate = useNavigate()
 
     useEffect(() => {
@@ -57,7 +58,7 @@ console.log(restaurant);
     <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
       <div className="accordion-body">
         $ {meal.price}
-        <button >Añadir al carrito</button>
+        <button onClick={() => setGetPrice(meal.price)}>Añadir al carrito</button>
       </div>
     </div>
   </div>
@@ -85,7 +86,7 @@ console.log(restaurant);
         {
             restaurant?.reviews.length === 0 ? <p>No hay reseñas</p> : ""
         }
-    <CardPurchases price={price}/>
+    <CardPurchases price={price} getPrice={getPrice}/>
         {/* <button onClick={handleClick} className="btn btn-primary">Crear pedido</button> */}
     </div>
   )

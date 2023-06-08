@@ -1,6 +1,6 @@
 import {useState} from "react"
 
-const CardPurchases = ({price}) => {
+const CardPurchases = ({price, getPrice}) => {
   const [counter, setCounter] = useState(0)
 
   const addCart = () => {
@@ -11,7 +11,7 @@ const CardPurchases = ({price}) => {
     setCounter(prev => prev - 1)
   }
 
-const total = price * counter
+const total = +getPrice * counter 
 
   return (
     <div>
@@ -20,7 +20,7 @@ const total = price * counter
         <p>{counter}</p>
         <span onClick={addCart}>+</span>
         <span onClick={minnusCart}>-</span>
-        <h3>TOTAL: {total}</h3>
+        <h3>{`TOTAL: ${total}`}</h3>
       </div>
     </div>
   )
